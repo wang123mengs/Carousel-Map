@@ -48,13 +48,13 @@ ul,li {
 
 .leftBtn {
     left: 10px;
-    background: url(./images/lr.jpeg) no-repeat;
+    background: url(../images/lr.jpeg) no-repeat;
     background-position: 0 0;
     background-size: cover;
 }
 .rightBtn {
     right: 10px;
-    background: url(./images/lr.jpeg) no-repeat;
+    background: url(../images/lr.jpeg) no-repeat;
     background-position: -87px 0;
     background-size: cover;
 }
