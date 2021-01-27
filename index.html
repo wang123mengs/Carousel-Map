@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>轮播图</title>
+    <link rel="stylesheet" href="./css/index.css">
+    <script src="./js/index.js"></script>
+</head>
+<body>
+    <div class="box">
+        <ul class="images">
+            <li>
+                <img src="./images/1.jpeg" alt="">
+            </li>
+            <li>
+                <img src="./images/2.jpeg" alt="">
+            </li>
+            <li>
+                <img src="./images/3.jpeg" alt="">
+            </li>
+            <li>
+                <img src="./images/4.jpeg" alt="">
+            </li>
+            <li>
+                <img src="./images/5.jpg" alt="">
+            </li>
+        </ul>
+
+        <ul class="icon_line">
+            <li class="active"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+        <div class="btn leftBtn"></div>
+        <div class="btn rightBtn"></div>
+    </div>
+    
+    <script>
+
+        new CarouselMap('box');
+
+    </script>
+</body>
+</html>

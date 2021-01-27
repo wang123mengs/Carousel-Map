@@ -1,0 +1,81 @@
+.box {
+    height: 500px;
+    width: 800px;
+    margin: 10px auto;
+    border: 1px solid red;
+    overflow: hidden;
+    position: relative;
+}
+
+ul,li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.images {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.images img {
+    height: 500px;
+    width: 800px;
+}
+
+.images li {
+    float: left;
+}
+
+.btn {
+    position: absolute;
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    margin-top: -25px;
+    background-color: red;
+    overflow: hidden;
+    border-radius: 50%;
+    opacity: 0;
+    transition: all .3s;
+    cursor: pointer;
+}
+
+.box:hover .btn {
+    opacity: 1;
+}
+
+.leftBtn {
+    left: 10px;
+    background: url(./images/lr.jpeg) no-repeat;
+    background-position: 0 0;
+    background-size: cover;
+}
+.rightBtn {
+    right: 10px;
+    background: url(./images/lr.jpeg) no-repeat;
+    background-position: -87px 0;
+    background-size: cover;
+}
+
+.icon_line {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+}
+.icon_line li {
+    float: left;
+    height: 4px;
+    width: 40px;
+    margin: 0 6px;
+    border-radius: 2px;
+    transition: all .3s;
+    background-color: #fff;
+    opacity: .5;
+    cursor: pointer;
+}
+
+.icon_line li.active,.icon_line li:hover {
+    opacity: 1;
+}
