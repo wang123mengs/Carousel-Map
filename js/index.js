@@ -19,6 +19,8 @@ class CarouselMap {
         this.btnLeft = this.box.querySelector('.leftBtn');
         this.btnRight = this.box.querySelector('.rightBtn');
 
+        this.type = true;
+
         this.speedTime = target.speedTime || 1;
         this.interval = null;
         this.mainInterval = null;
@@ -51,6 +53,9 @@ class CarouselMap {
 
         let _this = this;
         this.btnRight.addEventListener('click',() => {
+            if(!_this.type) return;
+
+            _this.type = false;
             
             _this.liwidth = 0;
 
@@ -61,7 +66,11 @@ class CarouselMap {
         });
 
         this.btnLeft.addEventListener('click',() => {
+            
+            if(!_this.type) return;
 
+            _this.type = false;
+            
             _this.liwidth = _this.lis[0].offsetWidth;
 
             clearInterval(_this.intervalR);
@@ -121,6 +130,8 @@ class CarouselMap {
                 _this.ulDome.appendChild(_this.lis[0]); //先删除imgli[0],然后加到末尾来，这样实现了循环
 
                 _this.uniteBtnIcon();
+                
+                _this.type = true;
 
                 _this.ulDome.style.left = 0;
             }
@@ -130,6 +141,7 @@ class CarouselMap {
     // 向右
     prevImg(_this){
         return () => {
+            
             _this.ulDome.style.left = '-' + _this.liwidth + 'px';
 
             _this.ulDome.insertBefore(_this.lis[_this.lis.length - 1], _this.lis[0]); //因为当前图片的位置一直都是imgli[0]，所以按照循环的思想，上一张就是imli[length-1]
@@ -143,7 +155,10 @@ class CarouselMap {
                 _this.uniteBtnIcon();
 
                 _this.ulDome.style.left = 0;
+
+                _this.type = true;
             }
+
         }
     }
 

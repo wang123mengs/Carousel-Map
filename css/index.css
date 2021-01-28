@@ -43,7 +43,7 @@ ul,li {
 }
 
 .box:hover .btn {
-    opacity: 1;
+    opacity: .8;
 }
 
 .leftBtn {
